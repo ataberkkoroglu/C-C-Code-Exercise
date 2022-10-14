@@ -31,11 +31,13 @@ int main(void){
 	printf("\nWrite Your Text ? : ");
 	gets(text);
 	Count(text,300);
+	while(1){
 	printf("\nWould You Like To Contunie To Program ? : ");
 	ch=getche();
 	if(ch=='E'||ch=='e'){
 		printf("\nProgram Is Working...");
 		sleep(3);
+		break;
 	}
 	else if (ch=='H'||ch=='h'){
 		printf("\nHave a Good Days...");
@@ -43,7 +45,8 @@ int main(void){
 	}
 	else{
 		printf("\nBe Written Wrong...\a");
-		abort();
+		
 	}
+}
 }
 }
