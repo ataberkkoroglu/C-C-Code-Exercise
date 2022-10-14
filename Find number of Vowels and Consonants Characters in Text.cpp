@@ -4,7 +4,7 @@
 #include<unistd.h>
 #include<stdlib.h>
 int Count(char a[],int b){
-	int vowels=0,constant=0;
+	int vowels=0,constant(0);
 	int unknown=0;
 	for(int i=0;i<300;i++){
 		if (a[i]=='e'||a[i]=='E'|| a[i]=='A'|| a[i]=='a'|| a[i]=='I' ||a[i]=='i'|| a[i]=='u'||a[i]=='U'|| a[i]=='ý'|| a[i]=='O'||a[i]=='o'){
@@ -32,7 +32,7 @@ int main(void){
 	gets(text);
 	Count(text,300);
 	while(1){
-	printf("\nWould You Like To Contunie To Program ? : ");
+	printf("\nWould You Like To Continue To Program ? : ");
 	ch=getche();
 	if(ch=='E'||ch=='e'){
 		printf("\nProgram Is Working...");
