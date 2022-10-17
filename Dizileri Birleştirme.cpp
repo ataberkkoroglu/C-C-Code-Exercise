@@ -26,8 +26,8 @@ int main(void){
  for (int i=0;i<n;i++){
  	z[i]=x[i];
  }
- for(int e=5;e<a;e++){
- 	z[e]=y[e-5];
+ for(int e=n;e<a;e++){
+ 	z[e]=y[e-n];
  }
  for (int k=0;k<a;k++){
  	printf("\n%d. Sayý: %d",k+1,z[k]);
