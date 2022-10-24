@@ -38,7 +38,7 @@ int main(void){
 	char sec;
 	while(1){
 	char Text[1000];
-	printf("\nPlease Don't Use 'ð' or 'Ð' in Your Text...\a");
+	printf("\nPlease Don't Use 'ÄŸ' or 'Äž' in Your Text...\a");
 	printf("\nWrite Your Text in Below: ");
 	cin.ignore();
 	cin.getline(Text,1000);
