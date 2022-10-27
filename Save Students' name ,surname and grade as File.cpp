@@ -26,7 +26,8 @@ int main(void){
 	
 	setlocale(LC_ALL,"Turkish");
 	fp=fopen("PhysicsLab.txt","r+");
-	
+	 
+	 
 	if (fp=='\0'){
 		fopen("PhysicsLab.txt","w+");
 	}
@@ -93,18 +94,29 @@ int main(void){
 			
 			    fprintf(fp," ");
 		    	for (int k=0;k<strlen(data[i].Soyad);k++){
+		    	
+		    	if (strlen(data[i].Soyad)>3){
 				if (k>2){
+					fprintf(fp,"*");
+				
+				}
+				else{
+					fprintf(fp,"%c",data[i].Soyad[k]);
+				}
+			}
+			else{
+				if(k>1){
 					fprintf(fp,"*");
 				}
 				else{
 					fprintf(fp,"%c",data[i].Soyad[k]);
 				}
 			}
-			
+		}
 			fprintf(fp," ");
 		    fprintf(fp," = %d\n",data[i].puan);
 		    
-	}
+}
 	    else if (a==1){
 	   			for (int k=0;k<strlen(data[i].Ad);k++){
 				if (k>=2){
@@ -115,13 +127,25 @@ int main(void){
 				}
 			}
 			fprintf(fp," ");
-	   			for (int k=0;k<strlen(data[i].Soyad);k++){
+	   		for (int k=0;k<strlen(data[i].Soyad);k++){
+		    	
+		    	if (strlen(data[i].Soyad)>3){
 				if (k>2){
+					fprintf(fp,"*");
+				
+				}
+				else{
+					fprintf(fp,"%c",data[i].Soyad[k]);
+				}
+			}
+			else{
+				if(k>1){
 					fprintf(fp,"*");
 				}
 				else{
 					fprintf(fp,"%c",data[i].Soyad[k]);
 				}
+			}
 			}
 			fprintf(fp," ");
 	        fprintf(fp," = %d\n",data[i].puan);
