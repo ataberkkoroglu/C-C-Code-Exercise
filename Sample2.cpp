@@ -1,9 +1,7 @@
 #include<iostream>
 #include<unistd.h>
 #include<conio.h>
-
 using namespace std;
-
 int main(void){
 	setlocale(LC_ALL,"Turkish");
 	printf("Welcome To Program...");
@@ -15,7 +13,7 @@ int main(void){
 		for(int i=1;i<=sayi;i++){
 			
 			for(int k=0;k<i;k++){
-				cout<<i+k;
+				cout<<i-k;
 			}
 			cout<<endl;	
 	}
@@ -36,4 +34,3 @@ int main(void){
 	}
 }
 }
-
