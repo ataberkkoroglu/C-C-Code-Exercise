@@ -23,7 +23,7 @@ class Calisan{
 			Maas=maas;
 		}
 		virtual void ZamYap()=0;
-	
+
 		void GetMaas(){
 			cout<<Ad<<" "<<Soyad<<"'nin Maaþý"<<Maas<<endl;
 		}
@@ -36,7 +36,7 @@ class Calisan{
 		}
 		void GetSoyad(){
 			cout<<"Çalýþanýn Soyadý: "<<Soyad<<endl;
-			
+
 		}
 		void GetBirim(){
 			cout<<"Çalýþanýn Çalýþtýðý Departman: "<<Birim<<endl;
@@ -45,24 +45,24 @@ class Calisan{
 class MaviYaka:public Calisan{
 	public:
 		MaviYaka(string ad,string soyad,double maas,string Birim):Calisan(ad,soyad,maas,Birim){
-			
+
 		}
 		void ZamYap(){
 			Maas *=0.25;
 			cout<<"Çalýþanýn Adý: "<<Ad<<"\n"<<"Maaþý: "<<Maas<<endl;
 		}
-	
+
 };
 class BeyazYaka:public Calisan{
 	    public:
 		BeyazYaka(string ad,string soyad,double maas,string Birim):Calisan(ad,soyad,maas,Birim){
-			
+
 		}
 		void ZamYap(){
 			Maas *=0.25;
 			cout<<"Çalýþanýn Adý: "<<Ad<<"\n"<<"Maaþý: "<<Maas<<endl;
 		}
-	
+
 };
 int main(void){
 	setlocale(LC_ALL,"Turkish");
@@ -76,18 +76,20 @@ int main(void){
 	FILE *file;
 	FILE *fp;
 	cout<<"Programa Hoþgeldiniz...";
-	file=fopen("Maviyaka.txt","w+");
-	fp=fopen("Beyazyaka.txt","w+");
-	if (file=='\0' || fp=='\0'){
-		printf("\nDosyalardan En Az Biri Oluþturulamadý...");
+	file=fopen("Maviyaka.txt","r+");
+	fp=fopen("Beyazyaka.txt","r+");
+	if (file==NULL || fp==NULL)
+	{
+	file=fopen("Maviyaka.txt","a+");
+	fp=fopen("Beyazyaka.txt","a+");
 	}
-	else{  
+
 	while(1){
 	cout<<endl<<"1-Mavi Yaka"<<endl<<"2-Beyaz Yaka";
 	cout<<endl<<"Girmek Ýstediðiniz Çalýþanýn Hangi Kategoride Çalýþýyor(1/2)? : ";
 	cin>>Bolum;
 	if (Bolum==1){
-        
+
 		cout<<endl<<"Çalýþanýn Adýný Giriniz: ";
 		scanf("%s",&Ad);
 		cout<<endl<<"Çalýþanýn Soyadýný Yazýnýz: ";
@@ -102,7 +104,7 @@ int main(void){
 		fwrite(&Calisan,sizeof(Calisan),1,file);
 }
 	else if (Bolum==2){
-		
+
 		cout<<endl<<"Çalýþanýn Adýný Giriniz: ";
 		scanf("%s",&Ad2);
 		cout<<endl<<"Çalýþanýn Soyadýný Yazýnýz: ";
@@ -115,7 +117,7 @@ int main(void){
 		Calisan2.GetBilgileriGetir();
 		fwrite(&Calisan2,sizeof(Calisan2),1,fp);
 }
-		
+
 
     else{
     	cout<<endl<<"Yanlýþ Deðer Girdiniz...";
@@ -140,6 +142,6 @@ int main(void){
 	}
 }
 }
-}
+
 
 
