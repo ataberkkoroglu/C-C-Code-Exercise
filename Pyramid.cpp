@@ -3,6 +3,7 @@
 #include<unistd.h>
 #include<conio.h>
 #include<math.h>
+#include<string.h>
 inline void Pyramid(int a){
 char space=' ';
 for (int i=0;i<=a;i++){
@@ -25,12 +26,12 @@ int main(void){
 	while(1){
 	printf("\nWrite Your Number How Many Line Pyramid Has : ");
 	scanf("%d",&sayi);
-	if (sayi>0 &&sayi<=25 ){
+	if (sayi>0 &&sayi<=50 ){
 	   Pyramid(sayi);
 	   break;
 }
 	else{
-		if (sayi>-25 &&sayi<0){
+		if (sayi>=-50 &&sayi<0){
 			sayi=abs(sayi);
 			Pyramid(sayi);
 			break;
