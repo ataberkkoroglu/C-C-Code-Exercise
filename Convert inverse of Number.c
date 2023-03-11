@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<conio.h>
-#include<unistd.h>
+#include<Windows.h>
 #include<time.h>
 
 int main(void){
@@ -17,7 +17,7 @@ while(1){
     while(1){
         printf("\nWould You Like To Contunie (Y/N) ? : ");ch=getche();
         if(ch=='Y' || ch=='y'){
-            sleep(2);break;
+            Sleep(2);break;
         }
         else if (ch=='N' || ch=='n'){
             printf("\nHave a Good Days...");
