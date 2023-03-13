@@ -1,10 +1,13 @@
 #include<iostream>
 #include<conio.h>
 #include<string.h>
-#include<unistd.h>
+#include<Windows.h>
 #include<time.h>
 #include<stdlib.h>
-#define randnum(min,max) ((rand() % (int) (((max) + 1) - (min))) + (min))
+inline int Random(int max,int min){
+   srand(time(NULL)); 
+   return (rand() % (int)(((max) + 1) - (min)) + (min));
+}
 using namespace std;
 class Program{
 	int sayi;
@@ -17,11 +20,10 @@ class Program{
 /*	int get(){
        return sayi;
 }*/
-    int set(){
-    	srand(time(NULL));
-	    sayi=rand()%sayi;
-	    return sayi;
-	}
+   inline int Random(){
+    srand(time(NULL)); 
+   return (rand() % (int)(((sayi) + 1) - (0)) + (0));
+}
 /* ~Program(){
  	cout<<'\t';
  }*/
@@ -30,7 +32,7 @@ class Program{
 
 int main(void){
 	time_t Time;
-	Time=time('\0');
+	Time=time(0);
 	int e,counter,sc;
 	char a[]={'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','R','S','T','U','X','W','V','Y','Z'};
 	char b[sizeof(a)]={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','r','s','t','u','x','w','v','y','z'};
@@ -56,28 +58,28 @@ int main(void){
 	while (counter<e){
 	  int A,B,N,P;
 	  Program program(3);
-	  sc=program.set();
+	  sc=program.Random();
 	  if (sc==0){
 	  	Program program1(strlen(a));
-	  	A=program1.set();
+	  	A=program1.Random();
 	  	password[counter]=a[A];
 	  	
 }
 	  else if (sc==1){
 	    Program program2(strlen(b));
-		B=program2.set();	  	
+		B=program2.Random();	  	
 	  	password[counter]=b[B];  
 	  	
 }
 	  else if (sc==2){
 	  	Program program3(strlen(n));
-	  	N=program3.set();
+	  	N=program3.Random();
 	  	password[counter]=n[N]; 
 	  	
 }
 	  else if (sc==3){
 	  	Program program4(strlen(p));
-	  	P=program4.set();
+	  	P=program4.Random();
 	  	password[counter]=p[P];
 	  	
 }
@@ -89,7 +91,7 @@ int main(void){
 		printf("\nWould You Like To Contunie(Y/N) ? : ");
 		ch=getche();
 		if (ch=='Y' || ch=='y'){
-			sleep(2);
+			Sleep(2000);
 			break;
 		}
 		else if (ch=='N' || ch=='n'){
