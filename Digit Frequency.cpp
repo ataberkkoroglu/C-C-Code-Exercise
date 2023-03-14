@@ -7,7 +7,7 @@ using namespace std;
 
 inline void Program(){
     time_t Time;
-    Time=time(0);
+    Time=time(NULL);
     struct tm *Tm=localtime(&Time);
     char Text[300],number[]={'0','1','2','3','4','5','6','7','8','9'},ch;
     int count[10],total,counter=0;
@@ -38,6 +38,8 @@ inline void Program(){
             break;
         }
         else if (ch=='N' || ch=='n'){
+            Time=time(NULL);
+            struct tm *Tm=localtime(&Time);
             printf("\nHave a Good Days...\n%d: %d : %d  %d.%d.%d",Tm->tm_hour,Tm->tm_min,Tm->tm_sec,Tm->tm_mday,Tm->tm_mon+1,Tm->tm_year+1900);
             exit(1);
         }
