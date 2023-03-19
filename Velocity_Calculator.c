@@ -4,7 +4,7 @@
 #include<conio.h>
 #include<Windows.h>
 
-float Velocity(double p2,double p1,double difference_time){
+inline float Velocity(double p2,double p1,double difference_time){
     printf("\n\e[1;37mDistance: %lf\n\e[1mElapsed Time : %lf\e[0m",p2-p1,difference_time);
     return (p2-p1)/difference_time;
 }
@@ -18,8 +18,6 @@ int main(void){
     printf("\e[1;1;36mWelcome...\n%d : %d : %d\t%d.%d.%d\e[0m\n",Tm->tm_hour,Tm->tm_min,Tm->tm_sec,Tm->tm_mday,Tm->tm_mon+1,Tm->tm_year+1900);
     double p1,p2;
     while(1){
-       Time=time(NULL);
-       struct tm *Tm=localtime(&Time);
        printf("\n\e[1;4;35mWhat The Distance From Referance Point To Your Location \e[1;4;37m(Write as KM):\e[0m ");
        scanf("%lf",&p1);
        printf("\n\e[1;4;31mIf You Want To Contunie, Press Enter Key...\n");
@@ -34,6 +32,8 @@ int main(void){
            break;
        }
        else{
+          Time=time(NULL);
+          struct tm *Tm=localtime(&Time);
          printf("\n\e[1;31mIf You Want To Quit This Process,Write any key...\n");
          printf("\n\e[1;4;32mBe Contunied...\e[0m\n");
          
