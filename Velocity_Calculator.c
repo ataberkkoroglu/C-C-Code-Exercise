@@ -3,7 +3,6 @@
 #include<time.h>
 #include<conio.h>
 #include<Windows.h>
-#include<math.h>
 
 float Velocity(double p2,double p1,double difference_time){
     printf("\n\e[1;37mDistance: %lf\n\e[1mElapsed Time : %lf\e[0m",p2-p1,difference_time);
