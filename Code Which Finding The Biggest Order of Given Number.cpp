@@ -40,8 +40,8 @@ public:
         
     }
 
-    ~Number() {
-        cout << endl << "Process Could Be Finished Successfully";
+       ~Number() {
+        cout << endl << "\033[1;32mProcess Could Be Finished Successfully.\n";
     }
 };
 
@@ -62,6 +62,7 @@ int main()
         }
         Number *number=new Number(num,state);
         number->Process();
+        number->~Number();
         while (1) {
             cout << endl << "\033[1;36mWould You Like To Contunie (Y/N) : "; cin.getline(ch, 5, 10); 
             if (*ch == 'Y' || *ch == 'y' || ch == "Yes") {
