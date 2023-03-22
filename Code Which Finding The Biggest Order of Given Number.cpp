@@ -21,26 +21,28 @@ public:
     }
     int Rem() {
         while (1) {
-            num2 /= 10;
-            sayac++;
             if (num2 < 10 && num2 >= 0) {
                 
                 break;
+            }
+            else{
+                 num2 /= 10;
+                 sayac++;
             }
         }
         return sayac;
     }
     void Process() {
         if (state == true) {
-            cout << endl << sayac + 1 << "\033[1;40m. order Of " << num << " : " << (int)(num / (pow(10, Rem())));
+            cout << endl << Rem()+1 << "\033[1;40m. order Of " << num << " : " << (int)(num / (pow(10, Rem())));
         }
         else {
-            cout << endl << sayac + 1 << "\033[1;40m. order Of -" << num << " : " << (int)(num / (pow(10, Rem())));
+            cout << endl << Rem()+1<< "\033[1;40m. order Of -" << num << " : " << (int)(num / (pow(10, Rem())));
         }
         
     }
 
-       ~Number() {
+    ~Number() {
         cout << endl << "\033[1;32mProcess Could Be Finished Successfully.\n";
     }
 };
