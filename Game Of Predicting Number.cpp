@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<unistd.h>
+#include<Windows.h>
 #include<conio.h>
 #include<time.h>
 #include<stdlib.h>
@@ -13,9 +13,11 @@ int Random(int a,int b){
 
 int main(void){
 	time_t time_1970;
-	time_1970=time('\0');
+	time_1970=time(0);
 	printf("Welcome To Program...\n%s",ctime(&time_1970));
 	const int a=1,b=10;
+	//int b=10.5;
+	//b=static_cast<int>(5);
 	char ch;
 	int sayi;
 	while(1){
@@ -37,10 +39,10 @@ int main(void){
 		printf("\nWould You Like To Contunie(Y/N) ? : ");
 		ch=getche();
 		if (ch=='Y'|| ch=='y'){
-			sleep(1);
+			Sleep(1000);
 			break;
 		}
-		else if (ch=='N' or ch=='n'){
+		else if (ch=='N' || ch=='n'){
 			printf("\nHave a Good Days...");
 			printf("\nNumber: %d",sayi);
 			exit(1);

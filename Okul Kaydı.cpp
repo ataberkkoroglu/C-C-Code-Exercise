@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<time.h>
 #include<string>
-#include<unistd.h>
+#include<Windows.h>
 #define randnum(min,max) ((rand() % (int) (((max) + 1) - (min))) + (min))
 using namespace std;
 
@@ -31,32 +31,32 @@ class OkulKayit{
 	  	Tel=tel;
 	  }
 	   void GetTel(){
-	  	cout<<"\nYeni Telefon Numaranýz: "<<Tel;
+	  	cout<<"\nYeni Telefon Numaranï¿½z: "<<Tel;
 	  }
 	  void setAdDegistir(string ad,string ad2){
 	  	Ad=ad;
 	  	Ad2=ad2;
 	  }
 	  void GetAd(){
-	  	cout<<"\nYeni Adýnýz: "<<Ad<<" "<<Ad2;
+	  	cout<<"\nYeni Adï¿½nï¿½z: "<<Ad<<" "<<Ad2;
 	  }
 	  void setSoyadDegistir(string soyad){
 	  	Soyad=soyad;
 	  }
 	  void GetSoyad(){
-	  	cout<<"\nYeni Soyadýnýz: "<<Soyad;
+	  	cout<<"\nYeni Soyadï¿½nï¿½z: "<<Soyad;
 	  }
 	  void SetTcDegistir(string tc){
 	  	TC=tc;
 	  }
 	  void GetTc(){
-	  	cout<<"\nYeni TC Kimlik Numaranýz: "<<TC;
+	  	cout<<"\nYeni TC Kimlik Numaranï¿½z: "<<TC;
 	  }
 	  void SetDyDegistir(string Dy){
 	  	this->Dy=Dy;
 	  }
 	  void GetDy(){
-	  	cout<<"\nYeni Doðum Tarihiniz: "<<Dy;
+	  	cout<<"\nYeni Doï¿½um Tarihiniz: "<<Dy;
 	  }
 };
 class Ogrenci:public OkulKayit{
@@ -70,13 +70,13 @@ class Ogrenci:public OkulKayit{
 			
 		}
 		void BilgileriGetir(){
-	  	 cout<<endl<<"Adý: "<<Ad<<" "<<Ad2<<endl<<"Soyad: "<<Soyad<<endl<<"TC: "<<TC<<endl<<"Velisinin Telefon Numarasý: "<<Tel;
-	  	 cout<<endl<<"Doðum Tarihi: "<<Dy<<"Öðrenci Numarasý: "<<No;
+	  	 cout<<endl<<"Adï¿½: "<<Ad<<" "<<Ad2<<endl<<"Soyad: "<<Soyad<<endl<<"TC: "<<TC<<endl<<"Velisinin Telefon Numarasï¿½: "<<Tel;
+	  	 cout<<endl<<"Doï¿½um Tarihi: "<<Dy<<"ï¿½ï¿½renci Numarasï¿½: "<<No;
 	  }
 	    
 	  
 	   	~Ogrenci(){
-	   		cout<<endl<<"Destructor Çalýþtý...";
+	   		cout<<endl<<"Destructor ï¿½alï¿½ï¿½tï¿½...";
 		   }
 	  
 };
@@ -89,18 +89,18 @@ class Ogretmen:public OkulKayit{
 			
 		}
 		void BilgileriGetir(){
-	  	 cout<<endl<<"Adý: "<<Ad<<" "<<Ad2<<endl<<"Soyad: "<<Soyad<<endl<<"TC: "<<TC<<endl<<"Doðum Tarihi: "<<Dy<<endl<<"Öðretmenin Telefon Numarasý: "<<Tel;
-	  	 cout<<endl<<"Branþ: "<<Brans;
+	  	 cout<<endl<<"Adï¿½: "<<Ad<<" "<<Ad2<<endl<<"Soyad: "<<Soyad<<endl<<"TC: "<<TC<<endl<<"Doï¿½um Tarihi: "<<Dy<<endl<<"ï¿½ï¿½retmenin Telefon Numarasï¿½: "<<Tel;
+	  	 cout<<endl<<"Branï¿½: "<<Brans;
 	  }
 	    void SetBransDegistir(string Brans){
 	    	this->Brans=Brans;
 		}
 		void GetBrans(){
-			cout<<"\nYeni Branþýnýz: "<<Brans;
+			cout<<"\nYeni Branï¿½ï¿½nï¿½z: "<<Brans;
 		}
 	  
 	  ~Ogretmen(){
-	   		cout<<endl<<"Destructor Çalýþtý...";
+	   		cout<<endl<<"Destructor ï¿½alï¿½ï¿½tï¿½...";
 		   }
 	   
 };
@@ -112,8 +112,8 @@ class Personel:public OkulKayit{
 			
 		}
 		void BilgileriGetir(){
-	  	 cout<<endl<<"Adý: "<<Ad<<" "<<Ad2<<endl<<"Soyad: "<<Soyad<<endl<<"TC: "<<TC<<endl<<"Doðum Tarihi: "<<Dy<<endl<<"Öðretmenin Telefon Numarasý: "<<Tel;
-	  	 cout<<endl<<"Görev: "<<Gorev;
+	  	 cout<<endl<<"Adï¿½: "<<Ad<<" "<<Ad2<<endl<<"Soyad: "<<Soyad<<endl<<"TC: "<<TC<<endl<<"Doï¿½um Tarihi: "<<Dy<<endl<<"ï¿½ï¿½retmenin Telefon Numarasï¿½: "<<Tel;
+	  	 cout<<endl<<"Gï¿½rev: "<<Gorev;
 	  }
 	    void SetGorevDegistir(string Gorev){
 	    	this->Gorev=Gorev;
@@ -122,14 +122,14 @@ class Personel:public OkulKayit{
 	    	cout<<"\nYeni Goreviniz: "<<Gorev;
 		}
 	  ~Personel(){
-	   		cout<<endl<<"Destructor Çalýþtý...";
+	   		cout<<endl<<"Destructor ï¿½alï¿½ï¿½tï¿½...";
 		   }
 };
 
 int main(void){
 
 	setlocale(LC_ALL,"Turkish");
-	cout<<"Programa Hoþgeldiniz...";
+	cout<<"Programa Hoï¿½geldiniz...";
 	FILE *fp, *fp2,*fp3;
 	int sec ,no;
 	char Name[10],Name2[10],Name3[10],Name4[10],Name5[20],Name6[20];
@@ -141,24 +141,24 @@ int main(void){
 	fp2=fopen("Ogretmenler.txt","a+");
 	fp3=fopen("Personeller.txt","a+");
 	if(fp=='\0'|| fp2=='\0'||fp3=='\0'){
-		printf("\nDosya Oluþturulamadý...");
+		printf("\nDosya Oluï¿½turulamadï¿½...");
 	}
 	else{
 
 	while(1){
-	cout<<endl<<"1-Öðrenci\n2-Öðretmen\n3-Personel";
-	cout<<endl<<"Hangi Türde Kayýt Yapmak Ýstiyorsunuz(1/2/3) ? : ";
+	cout<<endl<<"1-ï¿½ï¿½renci\n2-ï¿½ï¿½retmen\n3-Personel";
+	cout<<endl<<"Hangi Tï¿½rde Kayï¿½t Yapmak ï¿½stiyorsunuz(1/2/3) ? : ";
 	cin>>sec;
 	if (sec==1){
 		for (int k=0;k<10;k++){
      	 	Name2[k]='\0';
 		  }
-		cout<<endl<<"Öðrencinin Adýný Yazýnýz: ";
+		cout<<endl<<"ï¿½ï¿½rencinin Adï¿½nï¿½ Yazï¿½nï¿½z: ";
 		cin>>Name;
-		cout<<endl<<"Ýkinci Adýnýz Var Mý(E/H) ? : ";
+		cout<<endl<<"ï¿½kinci Adï¿½nï¿½z Var Mï¿½(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<endl<<"Adýnýz: ";
+			cout<<endl<<"Adï¿½nï¿½z: ";
 			cin>>Name2;
 		}
 		else{
@@ -166,14 +166,14 @@ int main(void){
 				Name2[k]='\0';
 			}
 		}
-		cout<<endl<<"Öðrencinin Soyadýný Yazýnýz: ";
+		cout<<endl<<"ï¿½ï¿½rencinin Soyadï¿½nï¿½ Yazï¿½nï¿½z: ";
 		cin>>Surname;
-		cout<<endl<<"Öðrencinin TC Numarasýný Giriniz: ";
+		cout<<endl<<"ï¿½ï¿½rencinin TC Numarasï¿½nï¿½ Giriniz: ";
 		cin>>Tc;
 		
-		cout<<endl<<"Öðrencinin Velisinin Cep Telefon Numarasýný Yazýnýz: ";
+		cout<<endl<<"ï¿½ï¿½rencinin Velisinin Cep Telefon Numarasï¿½nï¿½ Yazï¿½nï¿½z: ";
 		cin>>Tel;
-		cout<<endl<<"Öðrencinin Doðum Yýlýný Yazýnýz(01/01/2001): ";
+		cout<<endl<<"ï¿½ï¿½rencinin Doï¿½um Yï¿½lï¿½nï¿½ Yazï¿½nï¿½z(01/01/2001): ";
 		cin>>Dy;		
 		srand(time(NULL));
 		no=randnum(0,1000);
@@ -187,15 +187,15 @@ int main(void){
 		fprintf(fp,"%d",i);
 		fprintf(fp,")");
 		fprintf(fp,"\t");
-		cout<<"\nAdýnýzý Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+		cout<<"\nAdï¿½nï¿½zï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<"\nYeni Adýnýzý Giriniz: ";
+			cout<<"\nYeni Adï¿½nï¿½zï¿½ Giriniz: ";
 			scanf("%s",&Name);
-			cout<<"\nYeni Ýkinci Adýnýzý Girmek Ýstiyor Musunuz(E/H) ? : ";
+			cout<<"\nYeni ï¿½kinci Adï¿½nï¿½zï¿½ Girmek ï¿½stiyor Musunuz(E/H) ? : ";
 			sec3=getche();
 			if (sec3=='E'||sec3=='e'){
-				cout<<"\nYeni Ýkinci Adýnýzý Giriniz: ";
+				cout<<"\nYeni ï¿½kinci Adï¿½nï¿½zï¿½ Giriniz: ";
 			    scanf("%s",&Name2);
 			}
 			else{
@@ -209,10 +209,10 @@ int main(void){
 		fprintf(fp,"Name: ");
 		fprintf(fp,"%s %s",Name,Name2);
 		fprintf(fp,"\t");
-		cout<<"\nSoyadýnýzý Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+		cout<<"\nSoyadï¿½nï¿½zï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if(sec3=='E'||sec3=='e'){
-			cout<<"\nYeni Soyadýnýzý Yazýnýz: ";
+			cout<<"\nYeni Soyadï¿½nï¿½zï¿½ Yazï¿½nï¿½z: ";
 			cin>>Surname;
 			
 			ogrenci.setSoyadDegistir(Surname);
@@ -221,10 +221,10 @@ int main(void){
 		fprintf(fp,"Surname: ");
 		fprintf(fp,"%s",Surname);
 		fprintf(fp,"\t");
-		cout<<"\nTC kimlik Numarasýný Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+		cout<<"\nTC kimlik Numarasï¿½nï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if(sec3=='E'||sec3=='e'){
-			cout<<"\nYeni TC Kimlik Numarasýný Yazýnýz: ";
+			cout<<"\nYeni TC Kimlik Numarasï¿½nï¿½ Yazï¿½nï¿½z: ";
 			cin>>Tc;	
 			ogrenci.SetTcDegistir(Tc);
 			ogrenci.GetTc();
@@ -232,20 +232,20 @@ int main(void){
 		fprintf(fp," TC: ");
 		fprintf(fp,"%s",Tc);
 		fprintf(fp,"\t");
-		cout<<"\nDoðum Tarihini Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+		cout<<"\nDoï¿½um Tarihini Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if(sec3=='E'||sec3=='e'){
-			cout<<"\nYeni Doðum Tarihini Giriniz: ";
+			cout<<"\nYeni Doï¿½um Tarihini Giriniz: ";
 			cin>>Dy;
 			ogrenci.SetDyDegistir(Dy);
 			ogrenci.GetDy();
 		}
-		fprintf(fp,"Doðum Tarihi: %s\t",Dy);
+		fprintf(fp,"Doï¿½um Tarihi: %s\t",Dy);
 		fprintf(fp,"Tel: ");
-		cout<<endl<<"Cep Telefon Numaranýzý Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+		cout<<endl<<"Cep Telefon Numaranï¿½zï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<endl<<"Öðrencinin Velisinin Yeni Cep Telefon Numarasýný Yazýnýz: ";
+			cout<<endl<<"ï¿½ï¿½rencinin Velisinin Yeni Cep Telefon Numarasï¿½nï¿½ Yazï¿½nï¿½z: ";
 			cin>>Tel;		    
 		    ogrenci.setTelDegistir(Tel);
 		    ogrenci.GetTel();
@@ -261,12 +261,12 @@ int main(void){
      	for (int k=0;k<10;k++){
      	 	Name4[k]='\0';
 		  }
-		cout<<endl<<"Öðretmenin  Adýný Yazýnýz: ";
+		cout<<endl<<"ï¿½ï¿½retmenin  Adï¿½nï¿½ Yazï¿½nï¿½z: ";
 		cin>>Name3;
-		cout<<endl<<"Ýkinci Adýnýz Var Mý(E/H) ? : ";
+		cout<<endl<<"ï¿½kinci Adï¿½nï¿½z Var Mï¿½(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<endl<<"Adýnýz: ";
+			cout<<endl<<"Adï¿½nï¿½z: ";
 			cin>>Name4;
 		}
 		else{
@@ -274,17 +274,17 @@ int main(void){
 				Name4[i]=='\0';
 			}
 		}
-		cout<<endl<<"Öðretmenin Soyadýný Yazýnýz: ";
+		cout<<endl<<"ï¿½ï¿½retmenin Soyadï¿½nï¿½ Yazï¿½nï¿½z: ";
 		cin>>Surname2;		
-		cout<<endl<<"Öðretmenin TC Numarasýný Giriniz: ";
+		cout<<endl<<"ï¿½ï¿½retmenin TC Numarasï¿½nï¿½ Giriniz: ";
 		cin>>Tc2;
 		
-		cout<<endl<<"Öðretmenin Doðum Yýlýný Yazýnýz(01/01/2001): ";
+		cout<<endl<<"ï¿½ï¿½retmenin Doï¿½um Yï¿½lï¿½nï¿½ Yazï¿½nï¿½z(01/01/2001): ";
 		cin>>Dy2;		
-		cout<<endl<<"Öðretmenin Cep Telefon Numarasýný Yazýnýz: ";
+		cout<<endl<<"ï¿½ï¿½retmenin Cep Telefon Numarasï¿½nï¿½ Yazï¿½nï¿½z: ";
 		cin>>Tel2;
 		
-		cout<<endl<<"Öðretmenin Branþýný Yazýnýz: ";
+		cout<<endl<<"ï¿½ï¿½retmenin Branï¿½ï¿½nï¿½ Yazï¿½nï¿½z: ";
 		cin.ignore();
 		cin.getline(Brans,30);
 		Ogretmen ogretmen(Name3,Name4,Surname2,Tc2,Tel2,Dy2,Brans);
@@ -296,15 +296,15 @@ int main(void){
 		fprintf(fp2,"%d",e);
 		fprintf(fp2,")");
 		fprintf(fp2,"\t");
-			cout<<"\nAdýnýzý Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+			cout<<"\nAdï¿½nï¿½zï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<"\nYeni Adýnýzý Giriniz: ";
+			cout<<"\nYeni Adï¿½nï¿½zï¿½ Giriniz: ";
 			scanf("%s",&Name3);
-			cout<<"\nYeni Ýkinci Adýnýzý Girmek Ýstiyor Musunuz(E/H) ? : ";
+			cout<<"\nYeni ï¿½kinci Adï¿½nï¿½zï¿½ Girmek ï¿½stiyor Musunuz(E/H) ? : ";
 			sec3=getche();
 			if (sec3=='E'||sec3=='e'){
-				cout<<"\nYeni Ýkinci Adýnýzý Giriniz: ";
+				cout<<"\nYeni ï¿½kinci Adï¿½nï¿½zï¿½ Giriniz: ";
 			    scanf("%s",&Name4);
 			}
 			else{
@@ -318,10 +318,10 @@ int main(void){
 		fprintf(fp2,"Name: ");
 		fprintf(fp2,"%s %s",Name3,Name4);
 		fprintf(fp2,"\t");
-		cout<<"\nSoyadýnýzý Deðiþtirmek Ýstiyor Musunuz(E/H)? : ";
+		cout<<"\nSoyadï¿½nï¿½zï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H)? : ";
 		sec3=getche();
 		if(sec3=='E'||sec3=='e'){
-			cout<<"\nYeni Soyadýnýzý Giriniz: ";
+			cout<<"\nYeni Soyadï¿½nï¿½zï¿½ Giriniz: ";
 			cin>>Surname2;
 			
 			ogretmen.setSoyadDegistir(Surname2);
@@ -330,10 +330,10 @@ int main(void){
 		fprintf(fp2,"Surname: ");
 		fprintf(fp2,"%s",Surname2);
 		fprintf(fp2,"\t");
-		cout<<"\nTC Kimlik Numarasýný Deðiþtirmek Ýstiyor Musunuz(E/H)? : ";
+		cout<<"\nTC Kimlik Numarasï¿½nï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H)? : ";
 		sec3=getche();
 		if(sec3=='E'||sec3=='e'){
-			cout<<"\nYeni TC Kimlik Numarasýný Giriniz: ";
+			cout<<"\nYeni TC Kimlik Numarasï¿½nï¿½ Giriniz: ";
 			cin>>Tc2;
 			ogretmen.SetTcDegistir(Tc2);
 			ogretmen.GetTc();
@@ -341,20 +341,20 @@ int main(void){
 		fprintf(fp2," TC: ");
 		fprintf(fp2,"%s",Tc2);
 		fprintf(fp2,"\t");
-		cout<<"\nDoðum Tarihini Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+		cout<<"\nDoï¿½um Tarihini Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if(sec3=='E'||sec3=='e'){
-			cout<<"\nYeni Doðum Tarihinizi Yazýnýz: ";
+			cout<<"\nYeni Doï¿½um Tarihinizi Yazï¿½nï¿½z: ";
 			cin>>Dy2;
 			ogretmen.SetDyDegistir(Dy2);
 			ogretmen.GetDy();
 			
 		}
-		fprintf(fp2,"Doðum Tarihi: %s\t",Dy2);
-		cout<<endl<<"Cep Telefon Numaranýzý Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+		fprintf(fp2,"Doï¿½um Tarihi: %s\t",Dy2);
+		cout<<endl<<"Cep Telefon Numaranï¿½zï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<endl<<"Öðretmenin Yeni Cep Telefon Numarasýný Yazýnýz: ";
+			cout<<endl<<"ï¿½ï¿½retmenin Yeni Cep Telefon Numarasï¿½nï¿½ Yazï¿½nï¿½z: ";
 			cin>>Tel2;
 		    
 		    ogretmen.setTelDegistir(Tel2);
@@ -363,10 +363,10 @@ int main(void){
 		fprintf(fp2,"Tel: ");
 		fprintf(fp2,"%s",Tel2);
 		fprintf(fp2,"\t");
-		cout<<endl<<"Branþýnýzý Deðiþtirmek Ýstiyor Musunuz(E/h) ? : ";
+		cout<<endl<<"Branï¿½ï¿½nï¿½zï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/h) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<"\nYeni Branþýnýz : ";
+			cout<<"\nYeni Branï¿½ï¿½nï¿½z : ";
 			cin.ignore();
 			cin.getline(Brans,30);
 			
@@ -383,12 +383,12 @@ int main(void){
     	for (int k=0;k<10;k++){
      	 	Name6[k]='\0';
 		  }
-		cout<<endl<<"Personelin Adýný Yazýnýz: ";
+		cout<<endl<<"Personelin Adï¿½nï¿½ Yazï¿½nï¿½z: ";
 		cin>>Name5;
-		cout<<endl<<"Ýkinci Adýnýz Var Mý(E/H) ? : ";
+		cout<<endl<<"ï¿½kinci Adï¿½nï¿½z Var Mï¿½(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<endl<<"Adýnýz: ";
+			cout<<endl<<"Adï¿½nï¿½z: ";
 			cin>>Name6;
 		}
 		else{
@@ -396,18 +396,18 @@ int main(void){
 				Name6[i]=='\0';
 			}
 		}
-		cout<<endl<<"Personel Soyadýný Yazýnýz: ";
+		cout<<endl<<"Personel Soyadï¿½nï¿½ Yazï¿½nï¿½z: ";
 		cin>>Surname3;
 		
-		cout<<endl<<"Personel TC Numarasýný Giriniz: ";
+		cout<<endl<<"Personel TC Numarasï¿½nï¿½ Giriniz: ";
 		cin>>Tc3;
-		cout<<endl<<"Personelin Doðum Yýlýný Yazýnýz(01/01/2001): ";
+		cout<<endl<<"Personelin Doï¿½um Yï¿½lï¿½nï¿½ Yazï¿½nï¿½z(01/01/2001): ";
 		cin>>Dy3;
 		
-		cout<<endl<<"Personel Cep Telefon Numarasýný Yazýnýz: ";
+		cout<<endl<<"Personel Cep Telefon Numarasï¿½nï¿½ Yazï¿½nï¿½z: ";
 		cin>>Tel3;
 		
-		cout<<endl<<"Personelin Okuldaki Görevini Yazýnýz: ";
+		cout<<endl<<"Personelin Okuldaki Gï¿½revini Yazï¿½nï¿½z: ";
 		cin.ignore();
 		cin.getline(Gorev,30);
 		Personel personel(Name5,Name6,Surname3,Tc3,Tel3,Dy3,Gorev);
@@ -419,15 +419,15 @@ int main(void){
 		fprintf(fp3,"%d",h);
 		fprintf(fp3,")");
 		fprintf(fp3,"\t");
-			cout<<"\nAdýnýzý Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+			cout<<"\nAdï¿½nï¿½zï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<"\nYeni Adýnýzý Giriniz: ";
+			cout<<"\nYeni Adï¿½nï¿½zï¿½ Giriniz: ";
 			scanf("%s",&Name5);
-			cout<<"\nYeni Ýkinci Adýnýzý Girmek Ýstiyor Musunuz(E/H) ? : ";
+			cout<<"\nYeni ï¿½kinci Adï¿½nï¿½zï¿½ Girmek ï¿½stiyor Musunuz(E/H) ? : ";
 			sec3=getche();
 			if (sec3=='E'||sec3=='e'){
-				cout<<"\nYeni Ýkinci Adýnýzý Giriniz: ";
+				cout<<"\nYeni ï¿½kinci Adï¿½nï¿½zï¿½ Giriniz: ";
 			    scanf("%s",&Name6);
 			}
 			else{
@@ -441,20 +441,20 @@ int main(void){
 		fprintf(fp3,"Name: ");
 		fprintf(fp3,"%s %s",Name5,Name6);
 		fprintf(fp3,"\t");
-		cout<<endl<<"\nSoyadýnýzý Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+		cout<<endl<<"\nSoyadï¿½nï¿½zï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<"\nYeni Soyadýnýz: ";
+			cout<<"\nYeni Soyadï¿½nï¿½z: ";
 			cin>>Surname3;
 			personel.setSoyadDegistir(Surname3);
 			personel.GetSoyad();
 		}
 		fprintf(fp3,"Surname: ");
 		fprintf(fp3,"%s",Surname3);
-		cout<<endl<<"\nTC Kimlik Numaranýzý Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+		cout<<endl<<"\nTC Kimlik Numaranï¿½zï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<"\nTC Kimlik Numaranýz: ";
+			cout<<"\nTC Kimlik Numaranï¿½z: ";
 			cin>>Tc2;
 			personel.SetTcDegistir(Tc2);
 			personel.GetTc();
@@ -463,19 +463,19 @@ int main(void){
 		fprintf(fp3," TC: ");
 		fprintf(fp3,"%s",Tc3);
 		fprintf(fp3,"\t");
-		cout<<endl<<"Doðum Tarihinizi Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+		cout<<endl<<"Doï¿½um Tarihinizi Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<"\nYeni Doðum Tarihiniz : ";
+			cout<<"\nYeni Doï¿½um Tarihiniz : ";
 			cin>>Dy3;
 			personel.SetDyDegistir(Dy3);
 			personel.GetDy();
 		}
-		fprintf(fp3,"Doðum Tarihi: %s\t",Dy3);
-		cout<<endl<<"Cep Telefon Numaranýzý Deðiþtirmek Ýstiyor Musunuz(E/H) ? : ";
+		fprintf(fp3,"Doï¿½um Tarihi: %s\t",Dy3);
+		cout<<endl<<"Cep Telefon Numaranï¿½zï¿½ Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/H) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<endl<<"Personelin Yeni Cep Telefon Numarasýný Yazýnýz: ";
+			cout<<endl<<"Personelin Yeni Cep Telefon Numarasï¿½nï¿½ Yazï¿½nï¿½z: ";
 			cin>>Tel3;
 		    personel.setTelDegistir(Tel3);
 		    personel.GetTel();
@@ -483,10 +483,10 @@ int main(void){
 		fprintf(fp3,"Tel: ");
 		fprintf(fp3,"%s",Tel3);
 		fprintf(fp3,"\t");
-		cout<<endl<<"Görevinizi Deðiþtirmek Ýstiyor Musunuz(E/h) ? : ";
+		cout<<endl<<"Gï¿½revinizi Deï¿½iï¿½tirmek ï¿½stiyor Musunuz(E/h) ? : ";
 		sec3=getche();
 		if (sec3=='E'||sec3=='e'){
-			cout<<"\nYeni Göreviniz: ";
+			cout<<"\nYeni Gï¿½reviniz: ";
 			cin.ignore();
 			cin.getline(Gorev,30);
 			
@@ -501,13 +501,13 @@ int main(void){
 }
 else if (sec!=1&&sec!=2&&sec!=3){
 
-	cout<<"\nYanlýþ Deðer Girdiniz...\a";
+	cout<<"\nYanlï¿½ï¿½ Deï¿½er Girdiniz...\a";
 }
-cout<<endl<<"Devam Etmek Ýstiyor Musunuz(E/H) ? : ";
+cout<<endl<<"Devam Etmek ï¿½stiyor Musunuz(E/H) ? : ";
 sec2=getche();
 if (sec2=='E'||sec2=='e'){
 	cout<<endl<<"Devam Ediliyor...";
-	sleep(3);
+	Sleep(3000);
 }
 else if(sec2=='H'||sec2=='h'){
 	cout<<endl<<"Yine Bekleriz...";
@@ -517,7 +517,7 @@ else if(sec2=='H'||sec2=='h'){
 	exit(3);
 }
 else{
-	cout<<"\nYanlýþ Yazýldý...\a";
+	cout<<"\nYanlï¿½ï¿½ Yazï¿½ldï¿½...\a";
 	fclose(fp);
 	fclose(fp2);
 	fclose(fp3);

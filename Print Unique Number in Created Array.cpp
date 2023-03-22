@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<unistd.h>
+#include<windows.h>
 #include<conio.h>
 #include<math.h>
 
@@ -40,7 +40,7 @@ int main(void){
 	printf("Would You Like To Contunie (Y/N) ? : ");
 	ch=getche();
 	if (ch=='Y' or ch=='y'){
-		sleep(2);
+		Sleep(2000);
 		break;
 	}
 	else if (ch=='N' or ch=='n'){

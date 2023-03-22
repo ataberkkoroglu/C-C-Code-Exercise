@@ -4,9 +4,10 @@
 #include<Windows.h>
 #include<time.h>
 #include<stdlib.h>
-inline int Random(int max,int min){
+
+int Random(int max){
    srand(time(NULL)); 
-   return (rand() % (int)(((max) + 1) - (min)) + (min));
+   return (rand() % (int)(((max) + 1) - (0)) + (0));
 }
 using namespace std;
 class Program{
@@ -20,9 +21,9 @@ class Program{
 /*	int get(){
        return sayi;
 }*/
-   inline int Random(){
+    int Random(){
     srand(time(NULL)); 
-   return (rand() % (int)(((sayi) + 1) - (0)) + (0));
+      return (rand() % (int)(((sayi) + 1) - (0)) + (0));
 }
 /* ~Program(){
  	cout<<'\t';
@@ -60,26 +61,24 @@ int main(void){
 	  Program program(3);
 	  sc=program.Random();
 	  if (sc==0){
-	  	Program program1(strlen(a));
-	  	A=program1.Random();
+	  	srand(time(NULL));
+	  	A=Random(strlen(a));
 	  	password[counter]=a[A];
 	  	
 }
 	  else if (sc==1){
-	    Program program2(strlen(b));
-		B=program2.Random();	  	
+		B=Random(strlen(b));	  	
 	  	password[counter]=b[B];  
 	  	
 }
 	  else if (sc==2){
-	  	Program program3(strlen(n));
-	  	N=program3.Random();
+	  	N=Random(strlen(n));
 	  	password[counter]=n[N]; 
 	  	
 }
 	  else if (sc==3){
-	  	Program program4(strlen(p));
-	  	P=program4.Random();
+	  	
+	  	P=Random(strlen(p));
 	  	password[counter]=p[P];
 	  	
 }

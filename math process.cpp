@@ -2,7 +2,7 @@
 #include<math.h>
 #include<time.h>
 #include<conio.h>
-#include<unistd.h>
+#include<Windows.h>
 template<typename T>
 
 T Program(T a){
@@ -15,7 +15,7 @@ int main(){
 	double num;
 	char ch;
 	time_t Time;
-	Time=time('\0');
+	Time=time(NULL);
 	printf("Welcome To Program...\n%s",ctime(&Time));
   while(1){
 	while(1){
@@ -27,7 +27,7 @@ int main(){
 	while(1){
 		printf("\nWould You Like To Contunie(Y/N) ? : ");ch=getche();
 		if (ch=='Y' || ch=='y'){
-			sleep(2);
+			Sleep(2000);
 			break;
 		}
 		else if (ch=='N' || ch=='n'){

@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<locale.h>
 #include<conio.h>
-#include<unistd.h>
+#include<Windows.h>
 #define pi 3.14
 template<typename t>
 
@@ -26,7 +26,7 @@ while(1){
 printf("\nWould You Like To Contunie Program (Y/N) ? : ");
 ch=getche();
 if (ch=='Y'|| ch=='y'){
-	sleep(3);
+	Sleep(3000);
 	break;
 }
 else if (ch=='N'|| ch=='n'){
