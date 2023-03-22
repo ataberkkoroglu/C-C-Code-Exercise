@@ -1,4 +1,4 @@
-﻿
+
 #include <iostream>
 #include<time.h>
 #include<Windows.h>
@@ -48,7 +48,10 @@ public:
 //int Number::num2 =5;
 int main()
 {    
-    cout << endl << "\033[1;33mWelcome To Program...\n";
+    time_t Time;
+    Time=time(NULL);
+    struct tm *Tm=localtime(&Time);
+    cout << endl << "\033[1;33mWelcome To Program...\n\033[1;32m"<<endl<< Tm->tm_hour<< " : "<<Tm->tm_min<<" : "<<Tm->tm_sec<<"  "<<Tm->tm_mday<<" . "<<Tm->tm_mon+1<<" . "<<Tm->tm_year+1900;
     
     while (1) {
         int num; char ch[5]; bool state=true;
