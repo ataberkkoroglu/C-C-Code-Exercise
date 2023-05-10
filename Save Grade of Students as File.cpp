@@ -34,7 +34,7 @@ class Ogrenci{
 		void CalculateAverage(){
 			fp=fopen("Successful.txt","r+");
 	        file=fopen("Unsuccessful.txt","r+");
-	        if (fp=='\0' or file=='\0'){
+	        if (fp==NULL || file==NULL){
 		     fp=fopen("Successful.txt","w+");
 	         file=fopen("Unsuccessful.txt","w+");
 	         fprintf(fp,"Name\tSurname\tQuiz\tAsignment\tVize\tFinal\tCharacter\n");
@@ -206,7 +206,7 @@ int Ogrenci::i=0;
 int main(void){
 	time_t Time;
 	Time=time(NULL);
-	srand(time('\0'));
+	srand(Time);
 	printf("Welcome To Program...\n%s",ctime(&Time));
 	char Name[20],Surname[20],ch;
 	int vize,final,quiz,i=-1,sayac=0;	
@@ -217,10 +217,10 @@ int main(void){
 	 	 while(1){
 	 	 	cout<<endl<<"Would You Like To Contunie(Y/N) ? : ";
 	 	    ch=getche();
-	 	    if (ch=='Y' or ch=='y'){
+	 	    if (ch=='Y' || ch=='y'){
 	 	 	  sayac=0;
 		  }
-		   else if (ch=='N' or ch=='n'){
+		   else if (ch=='N' || ch=='n'){
 		   	cout<<endl<<"Have a Good Days...";
 		   	exit(1);
 		   }
